@@ -1,0 +1,220 @@
+*{box-sizing: border-box;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
+html {font-size: 100%;}
+body{
+    margin:0; 
+    padding:0;
+    width:100%;
+    overflow:hidden;
+    background:black;
+}
+#title{
+    height:100%;
+    /*background: url("../img/background.jpg") fixed no-repeat;*/
+    color: aliceblue;
+}
+#title h1{
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    top:0;
+    font-size: 5em;
+    left:-40%;
+    transition: 3s;
+}
+#title em{
+    font-family: 'Oswald', sans-serif;
+    position: absolute;
+    text-align: right;
+    width: 98%;
+    bottom:35%;
+    font-size: 3em;
+    right:-40em;
+    transition: 5s;
+}
+#arrow{
+    display: flex;
+    position: absolute;
+    text-align: center;
+    height: 20%;
+    font-size: 2em;
+    bottom:0;
+    left: 20%;
+    transition: 7s;
+    text-decoration: none; 
+    color: aliceblue;
+}
+#arrow i{padding-top: 2em;transition: 0s;}
+nav{
+    position: sticky;
+    width: 100%;
+    height: 5em;
+    padding:.03em;
+    background: skyblue;
+}
+nav ul{
+    display: flex; 
+    justify-content: space-around;
+    margin:0;
+    padding:0;
+    list-style-type: none;
+    height: 100%;
+}
+nav #logo{
+    padding:0;margin:0;
+}
+#logo img{height:100%;}
+nav li{
+    height: 100%;
+    width:100%; 
+    text-align: center;
+    transition: .3s;
+    padding:2em;
+}
+nav li:hover{background: steelblue; color: black;}
+nav a{text-decoration: none; color: aliceblue;width:100%;}
+section{min-height: 110%;}
+#metier{
+    margin-top: -1em;
+    background: url("../img/background.jpg") fixed no-repeat;
+}
+#back{
+    position: fixed; 
+    right: 7%; 
+    bottom: 7%;
+    width: 3%;
+    transform: rotate(180deg);
+}
+figure{
+    text-align:center;
+}
+figure img{height: 10em;}
+#metier{border-top: skyblue 1px solid;}
+#metier div{
+    margin: 11em auto 0;
+    width:40%;
+    border-top: springgreen 12px groove;
+    border-radius: 7px;
+}
+#metier p{
+    font-family: 'Oswald', sans-serif; 
+    font-size: 1.7em;
+    width:100%;
+    text-align: center;
+    font-style: oblique;
+}
+h2{
+    font-family: "Montserrat";
+    text-align: center;
+    font-size: 2em;
+}
+h3{text-align: center;}
+.cards{ 
+    display: flex; 
+    justify-content: space-around;
+    padding-top:5em;
+}
+.cards li{
+    background: rgba(255,255,255,.6);
+    padding-top:5em;
+    padding:5em 1em 1em 1em;
+    list-style: none;
+    width: 25em; 
+    height: 25em;
+    border-radius: 50%;
+    box-shadow: aliceblue 0 0 5px 5px;
+}
+.triangle-left{
+    display : inline-block;
+    height : 0;
+    width : 0;
+    border-top : 10em solid skyblue;
+    border-right : 120em solid transparent;
+}
+.triangle-right{
+    display : inline-block;
+    height : 0;
+    width : 0;
+    border-top : 10em solid skyblue;
+    border-left : 120em solid transparent;
+}
+#presentation{
+    background:url("../img/background1.jpg") fixed no-repeat;
+    color: aliceblue;
+    background-size: cover;
+}
+#services{background:wheat;}
+#services article{
+    padding-top: 10em;
+    display: flex;
+    justify-content: space-around;
+    width:90%;margin: 0 auto;
+}
+#services aside{
+    width: 20%;
+    height:30em;
+    background: skyblue;
+}
+footer{
+    background: black;
+    display: flex;
+    color: darkgoldenrod;
+    flex-wrap: wrap;
+}
+footer a{color: skyblue;}
+@media (max-width : 1280px){
+    body{overflow:auto;}
+    #metier{height: 110em;}
+    #metier .cards{
+        flex-wrap: wrap;
+        padding: 3em;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .cards h3{
+        margin-top: -1em;
+    }
+    .cards li{
+        margin-top: 1em;
+    }
+    #services article{flex-direction: column;margin: 0 auto;padding:0;}
+    #services aside{width:100%;height:5em;}
+    #arrow{display: none;}
+    nav{position:fixed;}
+}
+/*******************Video Background**********************/
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background: url('../img/background.jpg') fixed no-repeat;
+    background-size: cover;
+    transition: 1s opacity;
+}
+video #bgvid {
+    position: fixed; right: 0; bottom: 0;
+    width: 50%;
+    height: 50%;
+    width: auto; height: auto; z-index: -100;
+    background: url("../img/background.jpg") fixed no-repeat;
+    background-size: cover;
+}
+/*video #bgvid2{
+    position: absolute;
+    top: 300em;
+    left: 50%;
+    width: 100%;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background: url('../img/background.jpg') fixed no-repeat;
+    background-size: cover;
+    transition: 1s opacity;
+    position: absolute; 
+    right: 0; 
+    bottom: 0;
+    width: 50%;
+    height: 50%;
+    width: auto; height: auto; z-index: 100;
+}
+/**/
