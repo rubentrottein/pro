@@ -22,7 +22,6 @@ document.getElementsByTagName("h1")[0].addEventListener("click", function (){
 let hide=false;
 let sectionNb = 1;
 let scrollCount=0;
-
 window.addEventListener('load', homeScreen);
 function homeScreen(){
     document.getElementsByTagName("h1")[0].style.left += '10%';
@@ -40,69 +39,58 @@ if(scrollCount > 38){
     nav.style.position = 'fixed';
 }
 
-/**Smooth Scrolling */
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-
-/*Sticky Nav (onClick)*
-
-document.getElementById("back").addEventListener("click", function(){
-    document.getElementsByTagName("nav")[0].style.position = "initial";
-    sectionNb = 0;
-});
-document.getElementById("arrow").addEventListener("click", function(){
-    document.getElementsByTagName("nav")[0].style.position = "fixed";
-    reScroll();
-});
-
-function reScroll(){
-    //setInterval(100, getScroll);
-    function getScroll(){
-        document.getElementsByTagName("body")[0].style.overflow = "auto";
-        clearInterval();
-    }
-}
-
 /*Navigation au click */
 
 document.getElementById("arrow").addEventListener('click', nextSection);
 function nextSection(){
     document.getElementById("arrow").style.position = "fixed";
+    let arrow= document.querySelector('#arrow i');
+    arrow.innerHTML = sectionTitle[0];
     switch (sectionNb) {
         case 0:
             this.href="#metier";
             sectionNb = 1;
+            arrow.innerHTML = sectionTitle[2];
         break;
         case 1:
             this.href="#presentation";
             sectionNb = 2;
+            arrow.innerHTML = sectionTitle[3];
         break;
         case 2:
             this.href="#services";
             sectionNb = 3;
+            arrow.innerHTML = sectionTitle[4];
         break;
         case 3:
+            this.href="#portfolio";
+            sectionNb = 4;
+            arrow.innerHTML = sectionTitle[5];
+        break;
+        case 4:
             this.href="#title";
             sectionNb = 0;
+            arrow.innerHTML = sectionTitle[0];
         break;
         default:
             this.href="#title";
             sectionNb = 0;
+            arrow.innerHTML = sectionTitle[0];
+        }
     }
-    console.log("current is " + sectionNb);
-}
-document.getElementById("back").addEventListener('click', function (){
-    sectionNb = 0;  
-    console.log("current is " + sectionNb);
-});
+    /* Back Dynamique
+    document.getElementById("back").addEventListener('click', function (){
+        if (sectionNb !== undefined && sectionNb > 0){
+            sectionNb -= 1;
+            document.querySelector("#back p").innerHTML = "Revenir à " + sectionTitle[sectionNb-1];
+            document.querySelector("#back").href= sectionLinks[sectionNb-1];
+        } else {
+            sectionNb =0;
+            document.querySelector("#back p").innerHTML = "Revenir à " + sectionTitle[0];
+            document.querySelector("#back").href= sectionLinks[0];
+        }
+    });
+    */
 
 /*Sticky Nav (onScroll) */
     window.onscroll = function () {
@@ -114,4 +102,14 @@ document.getElementById("back").addEventListener('click', function (){
             nav.style.top = 0;
         }
     }
-/**/
+
+/*presentation*/
+let cvDl=document.querySelectorAll("#presentation figure");
+for (let i=0; i<cvDl.length;i++){
+    cvDl[i].addEventListener("mouseover", function(e){
+        document.querySelectorAll("#presentation figcaption")[i].style.bottom = "0";
+    });
+    cvDl[i].addEventListener("mouseleave", function(e){
+        document.querySelectorAll("#presentation figcaption")[i].style.bottom = "-10em";
+    });
+};

@@ -23,17 +23,7 @@
                 </aside>
             </article>
             <nav>
-                <ul>
-                    <a href="../index.html"><li>Accueil</li></a>
-                    <a href="#title"><li>Pro</li></a>
-                    <li id="logo">
-                        <p>Ruben</p>
-                        <img src="img/logo.png" alt="logo" />
-                        <p>Trottein</p>
-                    </li>
-                    <a href="enseignement/index.html"><li>Enseignement</li></a>
-                    <a href="artAsso/index.html"><li>Art et Asso</li></a>
-                </ul>
+                
             </nav>
             <script src="js/nav.js"></script>
         </header>
@@ -87,8 +77,31 @@
             <section id="presentation">
             <div class="triangle-left"></div>
             <h2>Présentation</h2>
-                <p>Diplômé en organisation et reconverti en développeur web depuis 2018, je me suis spécialisé dans le développement Front-end et l'intégration, mais suis capable de conduire des projets dans leur aspect back-end également</p>
-                <p>Mon objectif aujourd'hui est de mettre en oeuvre des projets visuellement propres et efficaces aux fonctionnalités abouties et agréables à utiliser.</p>
+                <article>
+                    <aside>
+                        <p>Diplômé en organisation et reconverti en développeur web depuis 2018, je me suis spécialisé dans le développement Front-end et l'intégration, mais suis capable de conduire des projets dans leur aspect back-end également</p>
+                        <p>Mon objectif aujourd'hui est de mettre en oeuvre des projets visuellement propres et efficaces aux fonctionnalités abouties et agréables à utiliser.</p>
+                        <ul class="deck">
+                            <li><figure><a href="Certifs/HTML_CSS.pdf"> <img src="img/certifs/html_css.png"alt="Certificat OpenClassroom HTML/CSS"><figcaption>OpenClassroom HTML/CSS</figcaption></figure></a></li>
+                            <li><figure><a href="Certifs/CSS_Grid.pdf"> <img src="img/certifs/CSS_Grid.png" alt="Certificat OpenClassroom CSS/Grid"><figcaption>OpenClassroom CSS Grid</figcaption></figure></a></li>
+                            <li><figure><a href="Certifs/Java.pdf"> <img src="img/certifs/java.png"     alt="Certificat OpenClassroom Java"><figcaption>OpenClassroom Java</figcaption></figure></a></li>
+                            <li><figure><a href="Certifs/OC_JS.pdf"> <img src="img/certifs/javascript.png"    alt="Certificat OpenClassroom JavaScript"><figcaption>OpenClassroom JavaScript</figcaption></figure></a></li>
+                        </ul>
+                    </aside>
+                    <aside id="cv">
+                        <a href="http://mistertea.fr/cv3/pj/cv" target="blank">
+                            <figure>
+                                <img src="img/cv.png" alt="CV">
+                                <figcaption>
+                                    <h3>Télécharger mon CV</h3>
+                                    <button>Télécharger</button>
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </aside>
+                </article>
+                <article>
+                </article>
             </section>
             <section id="services">
                 <div class="triangle-right"></div>
@@ -99,7 +112,21 @@
                     <aside></aside>
                 </article>
             </section>
-            <section>
+            <section id="portfolio">
+                <h2>Portfolio</h2>
+                <article>
+                    <figure class="item"></figure>
+                    <figure class="item"></figure>
+                    <figure class="item"></figure>
+                    <figure class="item"></figure>
+                    <figure class="item"></figure>
+                    <figure class="item"></figure>
+                    <figure class="item"></figure>
+                    <figure class="item"></figure>
+                </article>
+                <aside>Mes réalisations au cours de mon apprentissage et mes missions</aside>
+            </section>
+            <section id="plan">
                 <h2>Site Pro : Développeur/intégrateur</h2>
                 <article>
                     <ul>
@@ -121,7 +148,10 @@
                     </ul>
                 </article>
             </section>
-            <a href="#title" id="back"><img src="img/down-24813.svg" alt="Remonter"></a>
+            <a href="#title" id="back">
+                <img src="img/down-24813.svg" alt="Remonter">
+                <p></p>
+            </a>
         </main>
         <footer>
             <p>Gold: Video by <a href="https://pixabay.com/fr/users/motionstock-13298494/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=48569">motionstock</a> from <a href="https://pixabay.com/fr/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=48569">Pixabay</a></p>
@@ -134,5 +164,6 @@
             <p>Linkedin Image par <a href="https://pixabay.com/fr/users/bedexpstock-6161331/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2668700">BedexpStock</a> de <a href="https://pixabay.com/fr/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2668700">Pixabay</a></p>
         </footer>
         <script src="js/script.js"></script>
+        <script src="js/portfolio.js"></script>
     </body>
 </html>
